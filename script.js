@@ -16,7 +16,7 @@ const rulesModal = document.querySelector('.rules-modal');
 const closeRulesBtn = document.querySelector('.close-rules');
 const playerPick = document.querySelector('.player-pick');
 const computerPick = document.querySelector('.computer-pick');
-const header = document.querySelector('.header'); // Select the header element
+const header = document.querySelector('.header'); 
 
 // Game choices
 const gameChoices = ['rock', 'paper', 'scissors'];
