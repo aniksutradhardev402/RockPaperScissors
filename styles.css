@@ -199,7 +199,7 @@ body {
     left: 50%;
     width: 0;
     height: 0;
-    background: radial-gradient(circle, rgb(39, 155, 39), 70%, rgba(0, 100, 0, 0) 100%);
+    background: radial-gradient(circle, rgb(39, 155, 39), 90%, rgba(0, 100, 0, 0) 100%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -225,11 +225,11 @@ body {
       opacity: 1;
     }
     50% {
-      opacity: 1;
+      opacity: 0.5;
     }
     100% {
-      width: 250%;
-      height: 250%;
+      width: 200%;
+      height: 200%;
       opacity: 0;
     }
   }
@@ -251,6 +251,7 @@ body {
 .pick {
     text-align: center;
     position: relative;
+   
   }
   
   .pick h3 {

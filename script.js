@@ -93,6 +93,8 @@ function getBorderColor(choice) {
     if (choice === 'scissors') return '#BD00FF';
     return 'white';
 }
+
+
 // Play a round
 function playRound(playerChoice) {
     const computerChoice = getComputerChoice();
@@ -116,23 +118,24 @@ function playRound(playerChoice) {
     computerPick.parentElement.classList.remove('winner-glow');
     
     // Remove any existing extra rings
-    const existingRings = document.querySelectorAll('.extra-ring');
-    existingRings.forEach(ring => ring.remove());
-    
-    // Add winner glow to the result screen
-    const extraRing = document.createElement('div');
-    extraRing.classList.add('extra-ring');
+    const existingCircles = document.querySelectorAll('.extra-circle');
+    existingCircles.forEach(circle => circle.remove());
+ 
     
     if (winner === 'tie') {
         resultText.textContent = "IT'S A TIE";
     } else if (winner === 'player') {
         resultText.textContent = "YOU WIN AGAINST PC";
+        const extraCircle = document.createElement('div');  
+        extraCircle.classList.add('extra-circle');
         playerPick.parentElement.classList.add('winner-glow');
-        playerPick.parentElement.appendChild(extraRing);
+        playerPick.parentElement.appendChild(extraCircle);
     } else {
         resultText.textContent = "YOU LOST AGAINST PC";
+        const extraCircle = document.createElement('div');  
+        extraCircle.classList.add('extra-circle');
         computerPick.parentElement.classList.add('winner-glow');
-        computerPick.parentElement.appendChild(extraRing);
+        computerPick.parentElement.appendChild(extraCircle);
     }
     
     
